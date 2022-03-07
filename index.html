@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Fake SMS</title>
+        <link rel="icon" type="image/png" href="sms.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <form id="login" onsubmit="process(event)">
+                <p>Enter your victim's phone number:</p>
+                <input id="phone" type="tel" name="phone" oninvalid="setCustomValidity('Invalid phone number. Please, check placeholder')" oninput="setCustomValidity('')" required/>
+                <p>Enter your message (150 char):</p>
+                <textarea id="msg" class="msg" rows="5" maxlength="150" required></textarea>
+                <input type="submit" class="btn" value="Send"/>
+            </form>
+            <div class="alert alert-info" style="display: none;"></div>
+            <div class="alert alert-error" style="display: none;"></div>
+        </div>       
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js" type="text/javascript"></script>
+    <script src="scripts.js" type="text/javascript" ></script>
+</html>
